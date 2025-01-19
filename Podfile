@@ -1,8 +1,7 @@
 
 platform :ios, '12.0'
 
-target 'ShakeFlashlight' do
+target 'Shake flashlight' do
   use_frameworks!
-  project '../ShakeFlashlight.xcodeproj'  # Relative path to the Xcode project
-  # Add dependencies here, e.g., pod 'Alamofire'
+  project '../Shake flashlight.xcodeproj'  # Relative path to the Xcode project
 end
