@@ -7,12 +7,10 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
-          # Navigate to project directory and install dependencies
           cd ShakeFlashlight
           pod install
       - name: Build the Xcode archive
         script: |
-          # Build the project and create an archive
           xcodebuild -workspace ShakeFlashlight.xcworkspace \
             -scheme ShakeFlashlight \
             -sdk iphoneos \
@@ -20,7 +18,6 @@ workflows:
             archive -archivePath $CM_BUILD_DIR/ShakeFlashlight.xcarchive
       - name: Export IPA file
         script: |
-          # Export the IPA from the archive
           xcodebuild -exportArchive \
             -archivePath $CM_BUILD_DIR/ShakeFlashlight.xcarchive \
             -exportOptionsPlist $CM_SOURCE_DIR/exportOptions.plist \
